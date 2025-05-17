@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Management Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 450px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #aaa;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Project Management Form</h2>
+    <form id="projectForm" autocomplete="off">
+        <label for="projectId">Project ID (Primary Key)</label>
+        <input type="text" id="projectId" placeholder="Enter Project ID">
+
+        <label for="projectName">Project Name</label>
+        <input type="text" id="projectName" disabled>
+
+        <label for="assignedTo">Assigned To</label>
+        <input type="text" id="assignedTo" disabled>
+
+        <label for="assignmentDate">Assignment Date</label>
+        <input type="date" id="assignmentDate" disabled>
+
+        <label for="deadline">Deadline</label>
+        <input type="date" id="deadline" disabled>
+
+        <br>
+        <button type="button" id="saveBtn" disabled>Save</button>
+        <button type="button" id="updateBtn" disabled>Update</button>
+        <button type="button" id="resetBtn" disabled>Reset</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
